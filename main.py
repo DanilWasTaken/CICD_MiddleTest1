@@ -11,7 +11,14 @@ print(sentence)
 # Getting number of sentences
 def numberOfSentences(sentence):
     sentences = re.findall(r'[\w\s]*[\.\?!]+|[\w\s]*\.{3}', sentence)
-    num_sentences = len(sentences)
-    return num_sentences
+    numSentences = len(sentences)
+    return numSentences
+
+# Getting number of words
+def numberOfWords(sentence):
+    words = re.findall(r'\b\w+\b', sentence)
+    numWords = len(words)
+    return numWords
 
 print(f'Number of sentences is: {numberOfSentences(sentence)}')
+print(f'Number of sentences is: {numberOfWords(sentence)}')
